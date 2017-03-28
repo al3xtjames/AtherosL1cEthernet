@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -28,10 +28,8 @@
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>Model</key>
-			<string>AR8131 Gigabit Ethernet</string>
-			<key>Vendor</key>
-			<string>Atheros</string>
+			<key>EnableTSO</key>
+			<false/>
 			<key>IOClass</key>
 			<string>AtherosL1cEthernet</string>
 			<key>IOPCIMatch</key>
@@ -40,74 +38,17 @@
 			<integer>500</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-      <key>EnableTSO</key>
-			<false/>
-		</dict>
-		<key>L2C</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
 			<key>Model</key>
-			<string>AR8132 Fast Ethernet</string>
+			<string>AR8131 Gigabit Ethernet</string>
 			<key>Vendor</key>
 			<string>Atheros</string>
-			<key>IOClass</key>
-			<string>AtherosL1cEthernet</string>
-			<key>IOPCIMatch</key>
-			<string>0x10621969</string>
-			<key>IOProbeScore</key>
-			<integer>500</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-      <key>EnableTSO</key>
-			<false/>
-		</dict>
-		<key>L2C_B</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>Model</key>
-			<string>AR8152 v1.1 Fast Ethernet</string>
-			<key>Vendor</key>
-			<string>Atheros</string>
-			<key>IOClass</key>
-			<string>AtherosL1cEthernet</string>
-			<key>IOPCIMatch</key>
-			<string>0x20601969</string>
-			<key>IOProbeScore</key>
-			<integer>500</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-      <key>EnableTSO</key>
-			<true/>
-		</dict>
-		<key>L2C_B2</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>Model</key>
-			<string>AR8152 v2.0 Fast Ethernet</string>
-			<key>Vendor</key>
-			<string>Atheros</string>
-			<key>IOClass</key>
-			<string>AtherosL1cEthernet</string>
-			<key>IOPCIMatch</key>
-			<string>0x20621969</string>
-			<key>IOProbeScore</key>
-			<integer>500</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-      <key>EnableTSO</key>
-			<true/>
 		</dict>
 		<key>L1D</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>Model</key>
-			<string>AR8151 v1.0 Gigabit Ethernet</string>
-			<key>Vendor</key>
-			<string>Atheros</string>
+			<key>EnableTSO</key>
+			<true/>
 			<key>IOClass</key>
 			<string>AtherosL1cEthernet</string>
 			<key>IOPCIMatch</key>
@@ -116,17 +57,17 @@
 			<integer>500</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-      <key>EnableTSO</key>
-			<true/>
+			<key>Model</key>
+			<string>AR8151 v1.0 Gigabit Ethernet</string>
+			<key>Vendor</key>
+			<string>Atheros</string>
 		</dict>
 		<key>L1D_2_0</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>Model</key>
-			<string>AR8151 v2.0 Gigabit Ethernet</string>
-			<key>Vendor</key>
-			<string>Atheros</string>
+			<key>EnableTSO</key>
+			<true/>
 			<key>IOClass</key>
 			<string>AtherosL1cEthernet</string>
 			<key>IOPCIMatch</key>
@@ -135,8 +76,67 @@
 			<integer>500</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-      <key>EnableTSO</key>
+			<key>Model</key>
+			<string>AR8151 v2.0 Gigabit Ethernet</string>
+			<key>Vendor</key>
+			<string>Atheros</string>
+		</dict>
+		<key>L2C</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>EnableTSO</key>
+			<false/>
+			<key>IOClass</key>
+			<string>AtherosL1cEthernet</string>
+			<key>IOPCIMatch</key>
+			<string>0x10621969</string>
+			<key>IOProbeScore</key>
+			<integer>500</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>Model</key>
+			<string>AR8132 Fast Ethernet</string>
+			<key>Vendor</key>
+			<string>Atheros</string>
+		</dict>
+		<key>L2C_B</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>EnableTSO</key>
 			<true/>
+			<key>IOClass</key>
+			<string>AtherosL1cEthernet</string>
+			<key>IOPCIMatch</key>
+			<string>0x20601969</string>
+			<key>IOProbeScore</key>
+			<integer>500</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>Model</key>
+			<string>AR8152 v1.1 Fast Ethernet</string>
+			<key>Vendor</key>
+			<string>Atheros</string>
+		</dict>
+		<key>L2C_B2</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.insanelymac.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>EnableTSO</key>
+			<true/>
+			<key>IOClass</key>
+			<string>AtherosL1cEthernet</string>
+			<key>IOPCIMatch</key>
+			<string>0x20621969</string>
+			<key>IOProbeScore</key>
+			<integer>500</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>Model</key>
+			<string>AR8152 v2.0 Fast Ethernet</string>
+			<key>Vendor</key>
+			<string>Atheros</string>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
